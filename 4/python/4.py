@@ -3,7 +3,7 @@ import re
 
 
 def part_one(passports):
-    """ my correct answer was  """
+    """ my correct answer was 206 """
     print("*** PART 1 ***")
     valid_passports = []
     for passport in passports:
@@ -14,7 +14,7 @@ def part_one(passports):
 
 
 def part_two(passports):
-    """ my correct answer was  """
+    """ my correct answer was 123 """
     print("*** PART 2 ***")
     valid_passports = []
     for passport in passports:
