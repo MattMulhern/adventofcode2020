@@ -10,7 +10,7 @@ def part_one(lines):
 
 
 def part_two(lines):
-    """ my correct answer was """
+    """ my correct answer was 3398 """
     print("*** PART 2 ***")
     total = 0
     for group in groups:
@@ -40,7 +40,6 @@ def chunk_lines(lines):
 
 
 if __name__ == "__main__":
-    part_one_example_groups = [['abc'], ['a', 'b', 'c'], ['ab', 'ac'], ['a', 'a', 'a', 'a'], ['b']]
     with open("../6.example.input.txt", "r") as fp:
         lines = [x.strip() for x in fp.readlines()]
         groups = chunk_lines(lines)
