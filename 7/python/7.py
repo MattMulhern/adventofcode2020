@@ -53,7 +53,6 @@ def follow_bag(rules, bagname):
 
 
 def part_one_recursion(rules):
-    """ my correct answer was  332 """
     print("*** PART 1 (recursion) ***")
     total = 0
     for bagname in rules.keys():
@@ -73,7 +72,6 @@ def find_containing_bags(childname, rules):
 
 
 def part_one(rules):
-    """ my correct answer was 332 """
     print("*** PART 1 ***")
     shiney_bag_containers = []
     for bag_name in rules.keys():
@@ -109,7 +107,6 @@ def verify_rules(lines, rules):
 
 
 def part_two(rules):
-    """ my correct answer was"""
     print("*** PART 2 ***")
     total = (total_bag(rules, "shiny gold", 1) - 1)  # extra -1 is because we don't count the shiny gold bag itself.
     print(f"A single shiny gold bag leads to {total} overall.")
@@ -138,11 +135,11 @@ if __name__ == "__main__":
         bag_rules = parse_input(lines)
         verify_rules(lines, bag_rules)
         assert part_two(bag_rules) == 126
-    print("*** MY INPUT ***")
+    print("\n*** MY INPUT ***")
     with open("../7.input.txt", "r") as fp:
         lines = [x.strip() for x in fp.readlines()]
         bag_rules = parse_input(lines)
         verify_rules(lines, bag_rules)
-        part_one(bag_rules)
-        part_one_recursion(bag_rules)
-        part_two(bag_rules) == 126
+        assert part_one(bag_rules) == 332
+        assert part_one_recursion(bag_rules) == 332
+        assert part_two(bag_rules) == 10875
