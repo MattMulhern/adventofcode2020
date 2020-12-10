@@ -58,7 +58,7 @@ def is_infinite(instructions):
             return False, new_acc  # we want the acc AFTER the operation here
         if idx_dict[new_idx]:
             return True, acc  # we want the acc BEFORE the operation here
-        
+
         idx_dict[new_idx] = True
         acc = new_acc
         idx = new_idx
@@ -72,10 +72,10 @@ def part_two(instructions):
         new_instruction = flip_instruction(instruction)
         new_instructions[idx] = new_instruction
         is_inf, acc = is_infinite(new_instructions)
-        if is_inf == False:
+        if is_inf is False:
             print(f"Flipping instruction {idx}: {instruction} successfully exits with acc={acc}")
             return acc
-    print(f"Could not fix the boot program by flipping any instructions! :(")
+    print("Could not fix the boot program by flipping any instructions! :(")
 
 
 def flip_instruction(instruction):
@@ -88,6 +88,7 @@ def flip_instruction(instruction):
     else:
         raise ValueError(f"Could not flip instruction: {instruction}")
 
+
 def parse_input(lines):
     instructions = []
     for line in lines:
@@ -95,6 +96,7 @@ def parse_input(lines):
         val = line.split()[1]
         instructions.append((op, int(val)))
     return instructions
+
 
 if __name__ == "__main__":
     print("*** EXAMPLE ***")
