@@ -78,4 +78,3 @@ if __name__ == "__main__":
         assert diffs == (64, 37)
         print(f"{diffs[0]} * {diffs[1]} = {diffs[0] * diffs[1]}")
         assert part_two(sorted(nums)) == 1727094849536
-
