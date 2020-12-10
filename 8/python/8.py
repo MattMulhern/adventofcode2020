@@ -68,7 +68,7 @@ def part_two(instructions):
     print("*** PART 2 ***")
     for idx, instruction in enumerate(instructions):
         new_instructions = instructions.copy()
-        print(f"trying flipping instruction {idx}: {instruction}")
+        # print(f"trying flipping instruction {idx}: {instruction}")
         new_instruction = flip_instruction(instruction)
         new_instructions[idx] = new_instruction
         is_inf, acc = is_infinite(new_instructions)
@@ -103,11 +103,7 @@ if __name__ == "__main__":
         instructions = parse_input(lines)
         assert part_one(instructions) == 5
         assert part_two(instructions) == 8
-    # with open("../7.example2.input.txt", "r") as fp:
-    #     lines = [x.strip() for x in fp.readlines()]
-    #     bag_rules = parse_input(lines)
-    #     verify_rules(lines, bag_rules)
-    #     assert part_two(bag_rules) == 126
+
     print("\n*** MY INPUT ***")
     with open("../8.input.txt", "r") as fp:
         lines = [x.strip() for x in fp.readlines()]
